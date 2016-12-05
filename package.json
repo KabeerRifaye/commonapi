@@ -1,0 +1,27 @@
+{
+  "name": "commonapi",
+  "version": "1.0.0",
+  "description": "Dynamic routes with nvd3 charts.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KabeerRifaye/commonapi.git"
+  },
+  "keywords": [],
+  "author": "Kabeer Rifaye <kabeerrifaye@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "colors": "^1.1.2",
+    "express": "^4.14.0",
+    "jsonfile": "^2.4.0",
+    "open": "0.0.5"
+  },
+  "bugs": {
+    "url": "https://github.com/KabeerRifaye/commonapi/issues"
+  },
+  "homepage": "https://github.com/KabeerRifaye/commonapi#readme"
+}

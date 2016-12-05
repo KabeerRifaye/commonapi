@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CommonAPI</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.css">
+	<style>
+	.ps-chart {
+	    margin: 0 -10px 20px;
+	    overflow: hidden;
+	}
+	.ps-chart-list {
+		padding-left: 0;
+    	list-style: none;
+	}
+	.ps-chart-list li{
+		float: left;
+	    width: 50%;
+	    height: 115px;
+	    padding: 10px;
+	    font-size: 15px;
+	    line-height: 1.4;
+	    text-align: center;
+	    background-color: #f9f9f9;
+	    border: 1px solid #fff;
+	    padding-top: 50px;
+	}
+	</style>
+</head>
+<body>
+	<nav class="navbar navbar-default">
+		<div class="container">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#">Charts</a>
+			</div>
+
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<!-- <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav">
+					<li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
+				</ul>
+			</div> --><!-- /.navbar-collapse -->
+		</div><!-- /.container-fluid -->
+	</nav>
+	<div class="container">
+		<div class="row">
+			<div class="ps-chart">
+			</div>
+		</div>
+	</div>
+
+	<!-- scripts -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script type="text/javascript">
+		var item = ["usdl03-cnd-tor-2-e50", "usdl03-cnd-tor-5-e50", "usdl03-cnd-tor-6-e50","usdl03-cnd-tor-9-e50", "usdl03-cnd-tor-10-e50", "usdl03-cnd-tor-2-e501"];
+		$("div.ps-chart").append('<ul class="ps-chart-list">');
+		var ul = $("div.ps-chart > ul");
+		for(var i=0; i < item.length; i++) {
+			var eport = item[i].split("-").pop(),
+            	removePortName = item[i].indexOf('-' + eport),
+            	deviceName = item[i].substring(0, removePortName);
+			ul.append(function() {
+				return $('<li class="list"><span class="bar" ></span><a href=/chart/'+deviceName+'/'+eport+' target="_blank">' + item[i] + '</a></li>')
+			})
+		}
+	</script>
+</body>
+</html>
