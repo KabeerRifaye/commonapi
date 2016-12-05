@@ -8,7 +8,7 @@ var express = require('express'),
 	open = require('open');
 
 /* port */
-var port = 9999 || process.env.PORT;
+var port = process.env.PORT || 9999;
 
 /* view engine */
 app.set("views", path.join(__dirname, "/public"));
