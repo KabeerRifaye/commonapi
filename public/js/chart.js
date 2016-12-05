@@ -27,8 +27,8 @@ lineChart.prototype.prepdata = function(torName, ePort) {
   console.log("URL",window.location.origin);
   d3.json(host +'/api/chart/'+torName+'/'+ePort, function(err, data) {
     // console.log("data",data);
-    $("#CRC").empty();
-    DrawBWGraph(data, 'CRC', 'Time', 'RX CRC Errors');
+    $("#Charts").empty();
+    DrawBWGraph(data, 'Charts', 'Time', 'RX CRC Errors');
     // $("#Drop_chart_container").show();
   });
   function DrawBWGraph(seriesData, container, XLabel, YLabel) {   // this graph need to change with line chart.
