@@ -43,5 +43,4 @@ app.get('/api/chart/:torName/:ePort', Api.torName);
 /* express server */
 app.listen(port, function(req, res) {
 	console.log(("Common API listening on port : " + port).green);
-	open("http://localhost:"+port);
 })
